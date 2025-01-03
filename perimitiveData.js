@@ -41,7 +41,13 @@ let matchAllIn = eYouth.matchAll("in"); // all In in the text
 let capitalize = eYouth.toLocaleUpperCase()
 let lowerCase = eYouth.toLocaleLowerCase()
 
+//Repeat
+let word = "I am good!"
+let repeatedWord = word.repeat(3)
 
+//Replace and ReplaceAll
+let bits = "I like bits, bits the best animals to have!"
+let dogs = bits.replaceAll("bits", "dogs")
 
 
 
