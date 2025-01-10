@@ -130,7 +130,7 @@ switch (today) {
     console.log('this is not a day value', today)
     break;
 }
-// console.log("today", todayString);
+console.log("today", todayString);
 
 //  Determine Leap Year
 // Leap year Feb = 29 day
