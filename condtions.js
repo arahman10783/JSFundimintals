@@ -17,22 +17,32 @@ if (password.length >= 6) {
 // input to get user age
 let userAge = -10;
 
-if (userAge >= 0) {
-  // console.log(`${userAge} is valid (Positive)`)
-} else {
-  // console.log(`${userAge} is not valid (Negative)`)
-}
+// if (userAge >= 0) {
+//   console.log(`${userAge} is valid (Positive)`)
+// } else {
+//   console.log(`${userAge} is not valid (Negative)`)
+// }
+
+// Ternary Operators
+userAge >= 0 ? console.log(`${userAge} is valid (Positive)`) : console.log(`${userAge} is not valid (Negative)`)
 
 // checks if a number is even or odd
 let num = 5;
 // % Modulus the rest of division
 // check if the number has no rest of division on 2
+let evenOrOdd = num %2 === 0 ? `${num} is even` : `${num} is odd`
+
 
 if (num % 2 === 0) {
+  // evenOrOdd = `${num} is even`
   // console.log(`${num} is even`)
 } else {
+  // evenOrOdd = `${num} is odd`
   // console.log(`${num} is odd`)
 }
+
+
+
 
 // calculates the ticket price based on age with the following conditions:
 // age below 12 pay a ticket price of 5,
@@ -87,7 +97,7 @@ if(currentHour < 12){
   greeting = "Good Evening"
 }
 
-console.log(greeting)
+// console.log(greeting)
 
 // Convert Day to String
 // 0 sun  7 Sat
@@ -120,6 +130,70 @@ switch (today) {
     console.log('this is not a day value', today)
     break;
 }
-console.log("today", todayString);
+// console.log("today", todayString);
 
 //  Determine Leap Year
+// Leap year Feb = 29 day
+// Leap year divided by 4
+// 1900 not leap year 100 + 400
+let year = 2000 //new Date().getFullYear()
+
+// true && true = true
+// true && false = false
+// false && false = false
+
+// true || true = true
+// true || false = true
+
+// 1900 
+// year %4 === 0 = true
+// year % 100 !==0 = false
+// year % 400 ===0 = false
+// true && (false || false) = false
+
+// 2000 
+// year %4 === 0 = true
+// year % 100 !==0 = false
+// year % 400 ===0 = true
+// true && (false || true) = true
+
+if(year %4 === 0 && (year % 100 !==0 || year % 400 ===0)){
+  console.log(`${year} is a leap year`)
+}else{
+  console.log(`${year} isn't a leap year`)
+}
+
+// if(year % 4 === 0){
+//   if(year % 100 === 0){
+//     if(year % 400 === 0){
+//       console.log(`${year} is a leap year`)
+//     }else{
+//       console.log(`${year} isn't a leap year`)
+//     }
+//   }else{
+//     console.log(`${year} is a leap year`)
+//   }
+// } else {
+//   console.log(`${year} isn't a leap year`)
+// }
+
+
+
+// logic OR || set a default value if the first value = false (false, undefined, null)
+const user = {
+  age: "15"
+}
+
+let userName = user.name || "user"
+console.log('userName', userName)
+
+
+
+// check if the age > 13
+let myAge = 15
+let allowedOrNot = myAge >= 13 &&  "allowed"
+
+// if(myAge >= 13){
+//   allowedOrNot = "allowed"
+//   console.log('success', age)
+// }
