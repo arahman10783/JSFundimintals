@@ -174,3 +174,21 @@ fnMultiReturn()
 // Pure Function => take input and return output without any side effects
 // we can return any data types
 // every function has one return 
+
+
+const leapYearCalc = (year) => (
+  year %4 === 0 && (year % 100 !==0 || year % 400 ===0) 
+  ? "Leap year" 
+  : year
+)
+
+
+console.log('leapYearCalc', leapYearCalc(1900))
+
+function leapYear(year) {
+  if(year %4 === 0 && (year % 100 !==0 || year % 400 ===0)){
+    console.log(`${year} is a leap year`)
+  }else{
+    console.log(`${year} isn't a leap year`)
+  }
+}
