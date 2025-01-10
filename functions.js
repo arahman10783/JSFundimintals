@@ -17,39 +17,32 @@
 // Convert Day to String
 
 
-function dayToStringConvert(day){
-  let dayString
-  switch (day) {
-    case 0:
-      dayString = "Sunday";
-      break;
-    case 1:
-      dayString = "Monday";
-      break;
-    case 2:
-      dayString = "Tuesday";
-      break;
-    case 3:
-      dayString = "Wednesday";
-      break;
-    case 4:
-      dayString = "Thursday";
-      break;
-    case 5:
-      dayString = "Friday";
-      break;
-    case 6:
-      dayString = "Saturday";
-      break;
-    default:
-      dayString = "it is not a valid day value"
-      break;
-  }
-  console.log( dayString)
-}
+
 
 let today = new Date().getDay()
-// dayToStringConvert(today)
+
+function dayToStringConvert(day){
+  switch (day) {
+    case 0:
+      return "Sunday";
+    case 1:
+      return "Monday";
+    case 2:
+      return "Tuesday";
+    case 3:
+      return "Wednesday";
+    case 4:
+      return "Thursday";
+    case 5:
+      return "Friday";
+    case 6:
+      return "Saturday";
+    default:
+      return "it is not a valid day value"
+  }
+}
+
+console.log(dayToStringConvert(today))
 
 // Pure function input => return output with no side effects out function scope
 // function to Convert Fahrenheit to Celsius:
@@ -89,6 +82,7 @@ function userAge(userName, age){
 
 /// Higher Order Function 
 /// argument fn => callback function
+/// function declared in another function scope
 
 function calculateFn(a,b,fn){
   let result = fn(a,b)
@@ -121,6 +115,13 @@ setTimeout(() => {
   console.log('it is after 5sec')
 }, 0);
 
+// const myInterval = setInterval(() => {
+//     console.log('from Interval', new Date().getSeconds())
+//     clearInterval()
+// }, 1000);
+
+
+
 // arrow function
 const sumArrow = (a, b) => a + b
 console.log(sumArrow(1,2))
@@ -141,3 +142,35 @@ console.log(sumArrow(1,2))
 // console.log('count', count)
 
 
+function fnMultiReturn () {
+  let x = 20
+  let myName = "a"
+  function fnName () {
+    console.log('from funcion')
+  }
+  return fnName()
+  // return {
+  //   x, myName, fnName
+  // }
+}
+
+fnMultiReturn()
+
+
+
+
+// Declare function (function or arrow)
+// function name(params) {}
+// () => {}
+
+// Execution (call) 
+// fnName()
+
+// arguments can be any data type , can take default value
+// HOF 
+// function take another function (callback) as argument 
+// function (closer) declared inside another function (HOF)
+
+// Pure Function => take input and return output without any side effects
+// we can return any data types
+// every function has one return 
